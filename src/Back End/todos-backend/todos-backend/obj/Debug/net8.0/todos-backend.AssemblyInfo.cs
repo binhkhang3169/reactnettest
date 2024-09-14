@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("todos-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b434897e14f89158785e6d7e34b0734520de480d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6504d0b35ca42a57dbf8ce155ee0567eaf9ac3bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("todos-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("todos-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,7 +6,7 @@ namespace todos_backend.Service.Todos
     {
         List<Todo> GetTodos();
         Boolean AddTodos(Todo todo) ;
-        Boolean UpdateTodos(int todo);
+        Boolean UpdateTodos(Todo todo);
         Boolean DelTodos(int todo);
     }
 }

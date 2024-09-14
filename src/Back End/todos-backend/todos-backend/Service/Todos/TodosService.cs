@@ -33,9 +33,11 @@ namespace todos_backend.Service.Todos
             return _dbContext.Todos.OrderByDescending(x=>x.Id).ToList();
         }
 
-        public bool UpdateTodos(int todo)
+        public bool UpdateTodos(Todo todo)
         {
-            throw new NotImplementedException();
+            _dbContext.Todos.Update(todo);
+            _dbContext.SaveChanges();
+            return true;
         }
     }
 }

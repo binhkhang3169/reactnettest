@@ -40,9 +40,10 @@ namespace todos_backend.Controllers
         }
 
         // PUT api/<TodosController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public IActionResult Put(int id, [FromBody] Todo todo)
         {
+            return Ok(_todosService.UpdateTodos(todo));
         }
 
         // DELETE api/<TodosController>/5

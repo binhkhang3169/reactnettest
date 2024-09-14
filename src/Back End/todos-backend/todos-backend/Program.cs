@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using todos_backend.Data;
+using todos_backend.Service.Todos;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +10,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<TodosDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TodoDatabase"));
+});
+
+builder.Services.AddTransient<ITodosService, TodosService>();
+
 
 var app = builder.Build();
 
